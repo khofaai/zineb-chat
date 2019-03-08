@@ -1,20 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class RoomList extends React.Component {
-    render () {
+class RoomList extends Component {
+    render() {
         const orderedRooms = [...this.props.rooms].sort((a, b) => a.id > b.id)
         return (
             <div className="rooms-list">
                 <ul>
                     <h3>Your rooms:</h3>
-                    {orderedRooms.map(room => {
-                        const active = room.id === this.props.roomId ? ' active' : '';
+                    {orderedRooms.map( ({ id, name }) => {
+                        let active = id === this.props.roomId ? ' active' : '';
                         return (
-                            <li key={room.id} className={"room" + active}>
-                                <a href="#"
-                                    onClick={() => this.props.subscribeToRoom(room.id)}
-                                    >
-                                    # {room.name}
+                            <li key={ id } className={ "room" + active }>
+                                <a  href="javascript:;" 
+                                    onClick={ () => this.props.subscribeToRoom(id) } 
+                                >
+                                    # { name }
                                 </a>
                             </li>
                         )
@@ -25,4 +25,4 @@ class RoomList extends React.Component {
     }
 }
 
-export default RoomList
+export default RoomList;
