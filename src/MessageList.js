@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import Message from './Message'
 
-
 class MessageList extends React.Component {
     
     componentWillUpdate() {
@@ -31,4 +30,4 @@ class MessageList extends React.Component {
     }
 }
 
-export default MessageList
+export default MessageList;

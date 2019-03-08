@@ -3,7 +3,7 @@ import React from 'react'
 class SendMessageForm extends React.Component {
 
     constructor() {
-        super()
+        super();
         this.state = {
             message: ''
         }
@@ -40,4 +40,4 @@ class SendMessageForm extends React.Component {
     }
 }
 
-export default SendMessageForm
+export default SendMessageForm;
